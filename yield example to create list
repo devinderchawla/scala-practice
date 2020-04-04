@@ -1,0 +1,14 @@
+object HelloWorld {
+   def main(args: Array[String]) {
+       
+       val donutIngredients = List("flour", "sugar", "egg yolks", "syrup", "flavouring")
+ val sweeteningIngredients = for {
+    ingredient <- donutIngredients 
+    if (ingredient == "sugar" ||  ingredient == "flour")
+   
+ } yield ingredient 
+
+     println(s"Found sweetening ingredient = $sweeteningIngredients")
+
+   }
+}
